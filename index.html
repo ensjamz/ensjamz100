@@ -1,103 +1,193 @@
-<html data-cm-hook="1"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Like-A-Diamond</title>
+	<style>
+		body {
+			background-color: #000;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+		}
 
+		.box {
+			width: 200px;
+			height: 200px;
+			position: relative;
+			transform: rotate(45deg);
+			background-color: orange;;
+			transition: all 7.2s ease-in-out;
+		}
 
-<title>SuperAds.ETH   Lets go!<</title>
-<img src="Profile.png" alt="My Profile Picture">
+		.box:hover {
+			transform: rotate(5600deg) scale(3.3);
+		}
 
-<!--SuperAds.ETH-->
+		.box:before,
+		.box:after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			background-color: inherit;
+		}
 
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+		.box:before {
+			transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+		}
 
-<link rel="stylesheet" href="style.css">
+		.box:after {
+			transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+		}
 
-    <script defer="" src="emoji-pop.js"></script><script src="mobile-helper.js"></script>
-    
-    <script src="script.js"></script>
-    
-<style>
-body {
-  background-color: white;
-  color: black;
-}
+		.text1 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(0deg);
+			color: black;
+			
+			font-size: 2em;
+			font-weight: bold;
+			cursor: pointer;
+			z-index: 1;
+			text-align: center;
+		}
 
-.dark-mode {
-  background-color: black;
+		.text1:hover {
+			text-decoration: underline;
+			color: BLUE;
+		}
+
+		.hidden {
+			display: none;
+			
+		}
+
+		.no {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			color: white;
+			font-weight: bold;
+			z-index: 9;
+			transition: all .5s ease-in-out;
+			font-size: 1.5em;
+		}
+
+		.no.scale {
+			transform: translate(-50%, -50%) scale(20);
+			font-size: 50px;
+		}
+
+		.footer {
+			display: flex;
+			justify-content: space-between;
+			padding: 10px;
+			background-color: #333;
+			color: #fff;
+			font-size: 14px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+
+		.footer a {
+			color: #fff;
+			text-decoration: none;
+			margin-right: 10px;
+		}
+
+		.footer a:hover {
+			text-decoration: none;
+		}
+		
+.ethlist {
   color: white;
+  font-weight: bold;
+  position: absolute;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 5;
+  text-shadow: 1px 1px orange, -1px -1px orange, 1px -1px orange, -1px 1px orange;
+  font-size: 36px;
+  border-collapse: collapse;
 }
 
-.animated_rainbow_1 {
-    font-size: 42px;
-    font-family: Arial Black, Gadget, sans-serif;
-    background-image: -webkit-linear-gradient(left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
-    -webkit-animation: animatedBackground_a 5s linear infinite alternate;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: #0000;
 }
 
-@keyframes animatedBackground_a {
-    0% { background-position: 0 0 }
-    100% { background-position: -500px 0 }
+
+
 }
-</style>
- 
+}
+
+}
+	</style>
+</head>
+<body>
+   <table class="ethlist">
+  <tr>
+    <td>click.to.see.my.ENS.names.eth</td>
+  </tr>
+</table>
+    
 
 <script>
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
+	const text = document.querySelector('.ethlist');
+	const words = ["golfland.eth",'fishnet.eth', 'rg3.eth', 'slams.eth', 'nolimit.eth', 'supa-fast.eth','more soon...'];
+
+	text.addEventListener('click', () => {
+		const index = Math.floor(Math.random() * words.length);
+		text.innerHTML = words[index];
+	});
 </script>
-  
-</head>
 
-<body>
-<div id="content">
-      
-<nav>
-<div class="animated_rainbow_1"><b>SuperAds.eth</b>
+    
+	<div class="box"></div>
+	<div class="text1">😎</div>
+	<div class="no hidden">Radvoice.eth</div>
+	
+	
+	<footer class="footer">
+		<a href="https://twitter.com/Radvoice1">Twitter</a>
+		<a href="https://radvoice.eth.limo/">About</a>
+	</footer>
+	
+	
+	<script>
+		const text1 = document.querySelector('.text1');
+		const no = document.querySelector('.no');
 
-<ul>
-<a href="https://twitter.com/radvoice1"><img src="twitter.png" alt="Twitter" align="right" style="max-height: 45px; height: auto; width:auto;padding-right: 15%;"></a></li>
-</ul>
-</nav>
+		text1.addEventListener('click', () => {
+			no.style.fontSize = `${Math.floor(Math.random() * 20) + 1}px`;
+			no.style.top = `${Math.floor(Math.random() * 90) + 1}%`;
+			no.style.left = `${Math.floor(Math.random() * 90) + 1}%`;
+			no.classList.remove('hidden');
+			no.classList.add('scale');
+			
 
-<h1></h1>
-
-<table style="width:100%; margin-bottom: 20px;">
-<tr>
-<th><img src="Profile.png" style="display:block; max-height: 169px; max-width: 169px; margin-top: 10px; margin-right: auto; margin-left: auto; height: auto; width:auto;"></th>
-</tr>
-</table>
-<div></div>
-
-<table style="width:100%; margin-bottom: 20px;">
-<tr>
-<th><h3>ENS Super Site </h3></th>
-</tr>
-</table>
-<div></div>
-
-<div class="button-wrapper"> 
-<a id="app-store-button" href="https://app.ens.domains">
-<div></div>
-</a></div>
-       
-
-
-<footer>
-  <p>This is the footer.</p>
-
-<div class="divider"></div>
-<div class="about">
-<h5>SuperAds.ETH</h5>
-<h5>💲💲💲</h5>
-</div>
-</footer>
-</div>    
-  
-</body></html>
+			setTimeout(() => {
+				no.classList.add('hidden');
+				no.classList.remove('scale');
+			}, 2000);
+		});
+	</script>
+</body>
+</html>
